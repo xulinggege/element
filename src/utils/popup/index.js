@@ -147,9 +147,10 @@ export default {
         }
       }
 
-      if (getComputedStyle(dom).position === 'static') {
-        dom.style.position = 'absolute';
-      }
+      //禁用获取dom样式和修改dom样式。时间消耗太长。
+      // if (getComputedStyle(dom).position === 'static') {
+      //   dom.style.position = 'absolute';
+      // }
 
       dom.style.zIndex = PopupManager.nextZIndex();
       this.opened = true;
